@@ -1,0 +1,748 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 62.5%;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* --------------- */
+/*   BASE STYLES   */
+/* --------------- */
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: normal;
+}
+
+h1, h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+.fa-solid {
+  color: black;
+}
+
+.fa-brands, .fa-phone, .fa-face-grin-stars {
+  color: #FF8800;
+}
+
+/* ---------------- */
+/*  LAYOUT SECTION  */
+/* ---------------- */
+
+header {
+  height: 70px;
+}
+
+nav {
+  height: 100%;
+  position: relative;
+}
+
+.menuButton {
+  display: inline-block;
+  position: absolute;
+  top: -5px;
+  left: 5%;
+  border: none;
+  height: 100%;
+  background-color: rgba(0,0,0,0);
+}
+
+.menuButton label {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.logo {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 3rem;
+  width: auto;
+}
+
+.hiddenNav {
+  display: none;
+  width: 100%;
+  background-color: #E2EBF0;
+  position: absolute;
+  top: 70px;
+  text-align: center;
+  font-size: 2rem;
+  border-bottom: 1px solid lightslategray;
+  padding-bottom: 1.5rem;
+}
+
+.utility {
+  display: flex;
+  justify-content: center;
+  column-gap: 3rem;
+}
+
+.navList li {
+  margin: 1.5rem 0;
+}
+
+.navList {
+  padding: 0;
+  margin: 0;
+}
+
+input[name="menuButton"]:checked ~ .hiddenNav {
+  display: block;
+}
+
+main {
+  background: #E2EBF0;
+}
+
+.styleOrder, .styleBooking, .styleReviews {
+  padding: 5% 10%;
+}
+
+.styleMain, .styleAbout {
+  padding: 10% 10%;
+}
+
+.styleOrder, .styleReviews {
+  background: #EBF0F2;
+}
+
+.booking, .reviews {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.main {
+  max-width: 450px;
+}
+
+.aboutUs {
+  max-width: 500px;
+}
+
+.aboutUs p {
+  text-align: justify;
+}
+
+.main h1 {
+  font-size: 3.3rem;
+  margin-top: 0;
+}
+
+.main form {
+  margin: 2rem 0;
+  font-size: 1.2rem;
+}
+
+.main input {
+  width: 70%;
+  height: 3.3rem;
+  padding-left: 1rem;
+  border: 1px solid lightgrey;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.main button {
+  width: 30%;
+  height: 3.3rem;
+  color: white;
+  background-color: #FF8800;
+  border: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.main ul {
+  display: flex;
+  padding-left: 0;
+  column-gap: 1rem;
+}
+
+.main a {
+  text-align: start;
+  font-size: 1.5rem;
+  margin-right: 4rem;
+}
+
+.aboutUs > span:first-child, .order > span:first-child, .booking > span:first-child, .reviews > span:first-child {
+  color: #FF8800;
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.firstHalf, .secondHalf {
+  display: inline-block;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+.firstHalf {
+  background: #FF8800;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.secondHalf {
+  background: #ffa237;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.foodType {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.order label {
+  border-bottom: 1px solid lightgrey;
+  cursor: pointer;
+  padding: 1rem 1rem;
+  font-size: 1.5rem;
+}
+
+input[id="break"]:checked ~ .break, input[id="lunch"]:checked ~ .lunch, input[id="dinner"]:checked ~ .dinner, input[id="dessert"]:checked ~ .dessert, input[id="shakes"]:checked ~ .shakes {
+  color: #FF8800;
+  border-bottom: 1px solid #FF8800;
+}
+
+.food {
+  display: flex;
+  flex-flow: row wrap;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  justify-content: center;
+}
+
+.contadina, .salad, .megaToast, .toast {
+  height: 30rem;
+  width: 20rem;
+  background: url(http://placekitten.com/200/300);
+  text-align: center;
+  color: white;
+}
+
+.salad *, .megaToast *, .toast * {
+  display: none;
+}
+
+.contadinaItems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 1rem;
+  background-color: rgba(0, 0, 0, 0.475);
+  height: 30rem;
+  width: 20rem;
+  color: white;
+  align-items: center;
+}
+
+.food a {
+  color: white;
+  background-color: #FF8800;
+  border-radius: 2px;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.food img {
+  height: 5rem;
+  width: auto;
+}
+
+.food span:first-of-type {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.food span {
+  font-size: 2rem;
+}
+
+.booking {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: space-around;
+  text-align: center;
+}
+
+.booking h2 {
+  flex-basis: 100%;
+}
+
+.booking i {
+  margin: 2rem 0 3.5rem 0;
+}
+
+.booking span {
+  font-size: 1.5rem;
+  flex-basis: 100%;
+}
+
+.booking address {
+  color: #FF8800;
+  font-size: 2rem;
+  flex-basis: 100%;
+  margin: 1rem 0 2rem 0;
+}
+
+.booking .times {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.75rem;
+}
+
+.weekdays, .weekends {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.reel {
+  display: flex;
+  flex-direction: column;
+}
+
+.reel figure {
+  display: inline-block;
+  margin: 0;
+}
+
+.reel figure img {
+  display: block;
+  max-width: 100%;
+}
+
+.left, .right {
+  color:#FF8800;
+  font-weight: 900;
+  padding: 1rem;
+  font-size: 3rem;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.reviews i {
+  margin: 2rem 0 3rem 0;
+}
+
+.reviews img {
+  height: 5rem;
+  width: auto;
+}
+
+.reviews h3 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.reviews q {
+  font-style: italic;
+}
+
+/* ------------------- */
+/*  ADDITIONAL STYLES  */
+/* ------------------- */
+
+@media screen and (min-width: 1015px) {
+  .mobileInput {
+    display: none;
+  }
+
+  nav {
+    height: 100%;
+    position: relative;
+    display: block;
+  }
+
+  .logo {
+    display: inline-block;
+    height: 3rem;
+    width: auto;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(0%, -50%);
+    height: 3rem;
+    width: auto;
+  }
+
+  .hiddenNav {
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 5rem;
+    width: 80%;
+    height: 100%;
+    background-color: #E2EBF0;
+    position: static;
+    top: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    border-bottom: none;
+    padding-bottom: 0;
+    padding-right: 5%;
+  }
+
+  .utility {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+  }
+
+  .navList li {
+    margin: 0;
+    display: inline-block;
+  }
+
+  .navList {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    column-gap: 5rem;
+  }
+
+  .main h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 4.4rem;
+  }
+
+  .styleAbout {
+    padding: 5% 20% 15% 10%;
+  }
+
+  .aboutUs {
+    float: right;
+  }
+
+  .reel {
+    flex-direction: row;
+    margin-top: 5rem;
+    justify-content: center;
+    align-items: center;
+    column-gap: 6rem;
+  }
+  
+  .reel figure {
+    display: inline-block;
+    margin: 0;
+  }
+  
+  .reel figure img {
+    display: block;
+    max-width: 100%;
+  }
+
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
